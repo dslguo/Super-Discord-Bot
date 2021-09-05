@@ -3,7 +3,7 @@
 A side project where I get to explore the basics of Java, Spring and Maven by creating a discord bot with a wide range of
 functionalities.
 
-![img_1.png](img_1.png)
+![SuperDiscordBotSnippet](SuperDiscordBotSnippet.png)
 
 ### ~ A bit of context ~
 Throughout Victoria's 200+ day lockdown, my friends and I have spent most of our time studying, socializing and playing
