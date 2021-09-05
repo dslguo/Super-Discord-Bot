@@ -10,7 +10,7 @@ public class PingListenerImpl implements PingListener {
     @Override
     public void onMessageCreate(MessageCreateEvent messageCreateEvent) {
         if(messageCreateEvent.getMessageContent().equals("!ping")) {
-            messageCreateEvent.getChannel().sendMessage("pong");
+            messageCreateEvent.getChannel().sendMessage("pong pong pong");
         }
 
     }
