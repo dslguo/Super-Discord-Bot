@@ -23,7 +23,8 @@ public class RaceListenerImpl implements RaceListener {
                                 "The race begins!",
                                 "Be the first to **react** to this message and win!",
                                 null,
-                                "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/openmoji/292/horse-racing_1f3c7.png",
+                                "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws" +
+                                        ".com/thumbs/160/openmoji/292/horse-racing_1f3c7.png",
                                 messageCreateEvent.getChannel())
                         .thenAccept(message -> {
                             message.addReactionAddListener(listener -> {
@@ -31,9 +32,11 @@ public class RaceListenerImpl implements RaceListener {
                                     listener.requestUser().thenAccept(user -> {
                                         message.edit(new EmbedBuilder()
                                                 .setTitle("The race ends!")
-                                                .setDescription("Congratulations! **" + user.getName() + "** was first!\nThe race is now over!")
+                                                .setDescription("Congratulations! **" + user.getName() + "** was " +
+                                                        "first!\nThe race is now over!")
                                                 .setFooter("Race again?")
-                                                .setThumbnail("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/285/money-bag_1f4b0.png"));
+                                                .setThumbnail("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws" +
+                                                        ".com/thumbs/160/apple/285/money-bag_1f4b0.png"));
                                         active = false;
                                     });
                                 }
