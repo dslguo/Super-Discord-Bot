@@ -1,14 +1,14 @@
 # Super Discord Bot
 
-A side project where I get to explore the basics of Java, Spring and Maven by creating a discord bot with a wide range of
+A side project where I get to explore the basics of Java, Spring and Maven by creating a Discord bot with a wide range of
 functionalities.
 
 ![SuperDiscordBotSnippet](SuperDiscordBotSnippet.png)
 
 ### ~ A bit of context ~
 Throughout Victoria's 200+ day lockdown, my friends and I have spent most of our time studying, socializing and playing
-games on discord's voice channels. To lift everyone's spirit, I thought it was a good idea to collaborate and create a
-discord bot which offered a wide range of fun and interactive features. 
+games on Discord's voice channels. To lift everyone's spirit, I thought it was a good idea to collaborate and create a
+Discord bot which offered a wide range of fun and interactive features. 
 
 ### Technologies I used:
 - Java
