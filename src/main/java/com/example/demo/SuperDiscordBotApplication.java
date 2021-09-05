@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import com.example.demo.listeners.PingListener;
+import com.example.demo.listeners.RaceListener;
 import com.example.demo.listeners.RateListener;
 import org.javacord.api.DiscordApi;
 import org.javacord.api.DiscordApiBuilder;
@@ -24,6 +25,9 @@ public class SuperDiscordBotApplication {
 	@Autowired
 	private RateListener rateListener;
 
+	@Autowired
+	private RaceListener raceListener;
+
 	public static void main(String[] args) {
 		SpringApplication.run(SuperDiscordBotApplication.class, args);
 	}
@@ -38,6 +42,7 @@ public class SuperDiscordBotApplication {
 				.join();
 		api.addMessageCreateListener(pingListener);
 		api.addMessageCreateListener(rateListener);
+		api.addMessageCreateListener(raceListener);
 		return api;
 	}
 }

@@ -37,7 +37,7 @@ public class RateListenerImpl implements RateListener {
                         "Are you trying to use the '!rate' command? Please use the syntax '!rate [word]'. Thanks!",
                         "Rate again?",
                         "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/285/thinking-face_1f914.png",
-                        messageCreateEvent.getChannel());
+                        messageCreateEvent.getChannel(), true);
             }
         }
 
