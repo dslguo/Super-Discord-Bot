@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import com.example.demo.listeners.PingListener;
+import com.example.demo.listeners.RateListener;
 import org.javacord.api.DiscordApi;
 import org.javacord.api.DiscordApiBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +14,15 @@ import org.springframework.core.env.Environment;
 @SpringBootApplication
 public class SuperDiscordBotApplication {
 
+	// @Autowired tells Spring that we want it to inject the class for us
 	@Autowired
 	private Environment env;
+
+	@Autowired
+	private PingListener pingListener;
+
+	@Autowired
+	private RateListener rateListener;
 
 	public static void main(String[] args) {
 		SpringApplication.run(SuperDiscordBotApplication.class, args);
@@ -27,11 +36,8 @@ public class SuperDiscordBotApplication {
 				.setAllNonPrivilegedIntents()
 				.login()
 				.join();
-		api.addMessageCreateListener(event -> {
-			if(event.getMessageContent().equals(".ping")) {
-				event.getChannel().sendMessage("Pong!");
-			}
-		});
+		api.addMessageCreateListener(pingListener);
+		api.addMessageCreateListener(rateListener);
 		return api;
 	}
 }
