@@ -20,8 +20,6 @@ Discord bot which offered a wide range of fun and interactive features.
 
 ### Commands:
 
-!ping returns "pong" :D
-
 !rate {your input} returns how much you resemble your input
 
 !race to start a race and test your reaction speed against friends. The first user to react to the message wins!
